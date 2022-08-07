@@ -30,6 +30,14 @@
     <!--new recipe form -->
     <div id="newrecipe" style="display: none;"> <!--remove "hidden" to show the entry text-->
       <!--<form action="/action_page.php">-->
+        <label for="category">select recipe category</label>
+        <select name="category" id="category">
+          <option value="breakfast">Breakfast</option>
+          <option value="entres">Entre</option>
+          <option value="sauces">Sauces</option>
+          <option value="treats">Treats</option>
+          <option value="drinks">Drinks</option>
+        </select>
         <label for="title">title:</label>
         <input type="text" id="title"><br><br>
         <label for="recipe">recipe:</label>
@@ -41,6 +49,7 @@
       <!--</form>-->
     </div>
     <button id="clickBtn">newentry</button>
+    <!-- table of contents div -->
     <div id="contents">
       <!--table of contents-->
       <h1>Les Recipès d’ Más Buen</h1>
@@ -49,47 +58,47 @@
       <!--breakfast table of contents-->
       <div class="brec">
         <h2>Breakfast</h2>
-        <ul id="brec_ul">
-          <li><a href="#Waffles">Waffels</a></li>
-          <li><a href="#Crepes">Crepes</a></li>
+        <ul class="categorybin" id="breakfast">
+          <!-- <li><a href="#Waffles">Waffels</a></li>
+          <li><a href="#Crepes">Crepes</a></li> -->
           
         </ul>
      </div>
       <!--entre table of contents-->
       <h2>Entrès</h2>
-      <ul style="list-style: none">
-        <li><a href="#Beans">Beans</a></li>
+      <ul class="categorybin" id="entres" style="list-style: none">
+        <!-- <li><a href="#Beans">Beans</a></li>
         <li><a href="#Butternut Squash Chicken Curry">Butternut Squash Chicken Curry</a></li>
         <li><a href="#Pasta With Butternut Squash">Pasta With Butternut Squash</a></li>
         <li><a href="#Braised Cabbage in Coconut Milk">Braised Cabbage in Coconut Milk</a></li>
-        <li><a href="#Pesce Turchino al Forno con le Patate (hella good halibut)">Pesce Turchino al Forno con le Patate (hella good halibut)</a></li>
+        <li><a href="#Pesce Turchino al Forno con le Patate (hella good halibut)">Pesce Turchino al Forno con le Patate (hella good halibut)</a></li> -->
       
       
       </ul>
       
       <!--sauses table of contents-->
       <h2>sauces</h2>
-      <ul>
-        <li><a href="#Bechamel">Bechamel</a></li>
+      <ul class="categorybin" id="sauces">
+        <!-- <li><a href="#Bechamel">Bechamel</a></li>
         <li><a href="#Thai Peanut Sauce">Thai Peanut Sauce</a></li>
         <li><a href="#s3">dish</a></li>
         <li><a href="#s4">dish</a></li>
-        <li><a href="#s5">dish</a></li>
+        <li><a href="#s5">dish</a></li> -->
 
       </ul>
       
 
       <!--treats table of contents-->
       <h2>Them Treats</h2>
-      <ul>
-        <li><a href="#t1">Cranberry Muffins</a></li>
+      <ul class="categorybin" id="treats">
+        <!-- <li><a href="#t1">Cranberry Muffins</a></li>
         <li><a href="#t2">Scones</a></li>
         <li><a href="#t3">Choco Chip Cookies</a></li>
         <li><a href="#t4">Clafouties</a></li>
         <li><a href="#t5">Blackberry Cobbler</a></li>
         <li><a href="#t6">Fruit Crisp</a></li>
         <li><a href="#t7">dish</a></li>
-        <li><a href="#t8">dish</a></li>
+        <li><a href="#t8">dish</a></li> -->
 
       </ul>
       
@@ -98,31 +107,34 @@
 
       <!--drinks table of contents-->
       <h2>Dranks</h2>
-      <ul style="list-style: none">
-        <li><a href="#d1">Drink1</a></li>
+      <ul class="categorybin" id="drinks" style="list-style: none">
+        <!-- <li><a href="#d1">Drink1</a></li>
         <li><a href="#d2">Drink2</a></li>
-        <li><a href="#d3">Drink3</a></li>
+        <li><a href="#d3">Drink3</a></li> -->
       </ul>
-      <h2>Desserts</h2>
+      
       
     </div>
-
+    <!-- recipes div -->
     <div id="recipes">
       <!--Breakfast-->
       <h2>Breakfast</h2>
-      <h3 id="Waffles">Waffles</h3>
+      <div class="categorybin" id="breakfast-recipes">
+      <!-- <h3 id="Waffles">Waffles</h3>
       <p class="insturction"><pre>
 
       </pre></p>
       <h3 id="Crepes">Crepes</h3>
       <p class="insturction"><pre>
 
-      </pre></p>
+      </pre></p> -->
+      </div>
 
 
       <!--entres-->
       <h2>Entrès</h2>
-      <h3 id="Beans">Beans</h3>
+      <div class="categorybin" id="entres-recipes">
+      <!-- <h3 id="Beans">Beans</h3>
       <p class="insturction"><pre>
         Ingreds:
         Around 15 oz dry black beans
@@ -184,11 +196,13 @@
         -Make bechamel sauce 
         -Mix everything together
         -Sprinkle green onion on top
-      </pre></p>
-
+      </pre></p> -->
+      </div>
+      
       <!--sauces-->
       <h2>Sauces</h2>
-      <h3 id="Bechamel">Bechamel</h3>
+      <div class="categorybin" id="sauces-recipes">
+      <!-- <h3 id="Bechamel">Bechamel</h3>
       <p class="insturction"><pre>
         
       </pre></p>
@@ -204,9 +218,15 @@
           -1/4 tsp  cayenne pepper
           -Pinch of groun cumin 
       </pre></p>
+      </div> -->
+      <!-- treats -->
+      <h2>Treats</h2>
+      <div class="categorybin" id="treats-recipes">
 
+      </div>
       <!--drinks-->
       <h2>Dranks</h2>
+      <div class="categorybin" id="drinks-recipes">
       <h3 id="d1">Drink1</h3>
       <p class="insturction">drink1txt</p>
       <h3 id="d2">Drink2</h3>
@@ -218,6 +238,7 @@
           - osjf
           -skjdf
       </pre>drink3txt</p>
+      </div>
     </div> 
 
     <script src="main.js"></script>
